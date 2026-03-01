@@ -20,9 +20,9 @@ public class Persona {
     private Long id;
     private String nombre;
     private String apellido;
-    private int edad;
+    private Integer edad;
 
-    public Persona(Long id, String nombre, String apellido, int edad) {
+    public Persona(Long id, String nombre, String apellido, Integer edad) {
         this.id = id;
         this.nombre = nombre;
         this.apellido = apellido;
