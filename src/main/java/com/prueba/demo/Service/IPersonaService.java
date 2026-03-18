@@ -26,5 +26,5 @@ public interface IPersonaService {
     public Persona findPersona(Long id);
     
     //Metodo para modificar una persona
-    public Persona updatePerso(Long id, Persona upDatePersona);
+    public void updatePerso(Long id, Persona upDatePersona);
 }

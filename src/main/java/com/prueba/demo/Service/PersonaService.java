@@ -43,7 +43,7 @@ public class PersonaService implements IPersonaService {
     }
 
     @Override
-    public Persona updatePerso(Long id, Persona upDatePersona) {
+    public void updatePerso(Long id, Persona upDatePersona) {
         
        Persona  persona =  personaRepository.findById(id).orElseThrow(()-> new NoSuchElementException("No se encuentra el perfil con el id: "+ id ));
        
@@ -51,7 +51,7 @@ public class PersonaService implements IPersonaService {
         persona.setApellido(upDatePersona.getApellido() != null ? upDatePersona.getApellido() : persona.getApellido());
         persona.setEdad(upDatePersona.getEdad() != null ? upDatePersona.getEdad() : persona.getEdad());
         
-        return persona;
+        this.savePersona(persona);
        
          
     }

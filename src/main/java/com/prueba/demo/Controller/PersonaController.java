@@ -46,7 +46,7 @@ public class PersonaController {
     //Endpoint para modificar a una persona
     @PutMapping("personas/editar/{id}")
     public String editProfile(@PathVariable long id,
-                             @RequestBody Persona updatePersona){
+                              @RequestBody Persona updatePersona){
         iPersonaService.updatePerso(id, updatePersona);
         return "Los datos han sido actualizada";
     }
